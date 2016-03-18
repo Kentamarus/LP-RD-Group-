@@ -1,0 +1,105 @@
+.pop-up {
+    max-width: 340px;
+    height: 315px;
+    margin: 0 auto;
+    padding: 35px 30px 0;
+/*    background-image: url(../images/form.jpg);*/
+    background-color: #fff;
+    background-repeat: no-repeat;
+    position: relative
+}
+
+.call-answer .title {
+    color: #323232;
+    margin: 0;
+    text-transform: none
+}
+
+.call-answer .title span {
+    font-size: 22px;
+    color: #0166b0;
+    font-family: IntroRegular;
+    display: block
+}
+
+.call-answer .title i {
+    font-size: 22px;
+    color: #333;
+    font-family: LatoRegular;
+    font-style: normal;
+    display: block
+}
+
+.call-answer .ul-form {
+    margin-top: 20px;
+    padding: 0;
+    margin-bottom: 0
+}
+
+.call-answer .text-entry {
+    font-size: 16px;
+    font-family: LatoLight;
+    color: #333;
+    text-align: left;
+    padding-left: 54px;
+    background-color: #ccc;
+    border-color: #bababa
+}
+
+.call-answer .block-base-windows {
+    height: 295px
+}
+
+.call-answer .ico {
+    background-position: 20px center
+}
+
+.call-answer form {
+    padding-bottom: 3px
+}
+
+.call-answer .ul-form li {
+    padding-bottom: 28px
+}
+
+.thanks {
+    padding-top: 90px
+}
+
+.call-answer.small-window {
+    height: 230px;
+    padding-top: 0
+}
+
+.call-answer.small-window .thanks {
+    padding-top: 56px
+}
+
+.thanks .title span {
+    font-size: 26px;
+    color: #4f4f4f;
+    font-family: GothamProMedium;
+    display: block;
+    padding-bottom: 20px
+}
+
+.thanks p {
+    text-align: center;
+    font-size: 20px;
+    color: #4f4f4f;
+    font-family: GothamProMedium;
+    margin: 0
+}
+
+
+
+.btn-close, 
+button.mfp-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 14px!important;
+    height: 14px!important;
+    background: url(../images/icons/close.png) no-repeat;
+    font-size: 0;
+}

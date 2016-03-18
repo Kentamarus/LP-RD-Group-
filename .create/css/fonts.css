@@ -1,0 +1,60 @@
+@font-face {
+    font-family: OpenSansRegular;
+	src: url("../fonts/OpenSansRegular.eot");
+	src: url("../fonts/OpenSansRegular.svg") format('svg'),
+		url("../fonts/OpenSansRegular.ttf") format('truetype'),		
+		url("../fonts/OpenSansRegular.otf") format("opentype"),
+		url("../fonts/OpenSansRegular.woff") format("woff");
+   }
+@font-face {
+    font-family: DINPro-Black;
+	src: url("../fonts/DINPro-Black.eot");
+	src: url("../fonts/DINPro-Black.svg") format('svg'),
+		url("../fonts/DINPro-Black.ttf") format('truetype'),		
+		url("../fonts/DINPro-Black.otf") format("opentype"),
+		url("../fonts/DINPro-Black.woff") format("woff");
+   }
+@font-face {
+    font-family: DINPro-Light;
+	src: url("../fonts/DINPro-Light.eot");
+	src: url("../fonts/DINPro-Light.svg") format('svg'),
+		url("../fonts/DINPro-Light.ttf") format('truetype'),		
+		url("../fonts/DINPro-Light.otf") format("opentype"),
+		url("../fonts/DINPro-Light.woff") format("woff");
+   }
+
+@font-face {
+    font-family: DINPro-Medium;
+	src: url("../fonts/DINPro-Medium.eot");
+	src: url("../fonts/DINPro-Medium.svg") format('svg'),
+		url("../fonts/DINPro-Medium.ttf") format('truetype'),		
+		url("../fonts/DINPro-Medium.otf") format("opentype"),
+		url("../fonts/DINPro-Medium.woff") format("woff");
+   }
+
+@font-face {
+    font-family: DINPro-Bold;
+	src: url("../fonts/DINPro-Bold.eot");
+	src: url("../fonts/DINPro-Bold.svg") format('svg'),
+		url("../fonts/DINPro-Bold.ttf") format('truetype'),		
+		url("../fonts/DINPro-Bold.otf") format("opentype"),
+		url("../fonts/DINPro-Bold.woff") format("woff");
+   }
+@font-face {
+    font-family: DINPro-CondensedRegular;
+	src: url("../fonts/DINPro-CondensedRegular.eot");
+	src: url("../fonts/DINPro-CondensedRegular.svg") format('svg'),
+		url("../fonts/DINPro-CondensedRegular.ttf") format('truetype'),		
+		url("../fonts/DINPro-CondensedRegular.otf") format("opentype"),
+		url("../fonts/DINPro-CondensedRegular.woff") format("woff");
+   }
+/*
+@font-face {
+    font-family: ;
+	src: url("../fonts/.eot");
+	src: url("../fonts/.svg") format('svg'),
+		url("../fonts/.ttf") format('truetype'),		
+		url("../fonts/.otf") format("opentype"),
+		url("../fonts/.woff") format("woff");
+   }
+*/
