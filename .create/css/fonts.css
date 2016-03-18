@@ -6,6 +6,16 @@
 		url("../fonts/OpenSansRegular.otf") format("opentype"),
 		url("../fonts/OpenSansRegular.woff") format("woff");
    }
+
+@font-face {
+    font-family: OpenSans-Bold;
+	src: url("../fonts/OpenSans-Bold.eot");
+	src: url("../fonts/OpenSans-Bold.svg") format('svg'),
+		url("../fonts/OpenSans-Bold.ttf") format('truetype'),		
+		url("../fonts/OpenSans-Bold.otf") format("opentype"),
+		url("../fonts/OpenSans-Bold.woff") format("woff");
+   }
+
 @font-face {
     font-family: DINPro-Black;
 	src: url("../fonts/DINPro-Black.eot");
@@ -48,6 +58,44 @@
 		url("../fonts/DINPro-CondensedRegular.otf") format("opentype"),
 		url("../fonts/DINPro-CondensedRegular.woff") format("woff");
    }
+@font-face {
+    font-family: DINPro-CondensedMedium;
+	src: url("../fonts/DINPro-CondensedMedium.eot");
+	src: url("../fonts/DINPro-CondensedMedium.svg") format('svg'),
+		url("../fonts/DINPro-CondensedMedium.ttf") format('truetype'),		
+		url("../fonts/DINPro-CondensedMedium.otf") format("opentype"),
+		url("../fonts/DINPro-CondensedMedium.woff") format("woff");
+   }
+
+@font-face {
+    font-family: DINPro-CondensedBlack;
+	src: url("../fonts/DINPro-CondensedBlack.eot");
+	src: url("../fonts/DINPro-CondensedBlack.svg") format('svg'),
+		url("../fonts/DINPro-CondensedBlack.ttf") format('truetype'),		
+		url("../fonts/DINPro-CondensedBlack.otf") format("opentype"),
+		url("../fonts/DINPro-CondensedBlack.woff") format("woff");
+   }
+@font-face {
+    font-family: DINPro-Regular;
+	src: url("../fonts/DINPro.eot");
+	src: url("../fonts/DINPro.svg") format('svg'),
+		url("../fonts/DINPro.ttf") format('truetype'),		
+		url("../fonts/DINPro.otf") format("opentype"),
+		url("../fonts/DINPro.woff") format("woff");
+   }
+
+@font-face {
+    font-family: OpenSans-Semibold;
+	src: url("../fonts/OpenSans-Semibold.eot");
+	src: url("../fonts/OpenSans-Semibold.svg") format('svg'),
+		url("../fonts/OpenSans-Semibold.ttf") format('truetype'),		
+		url("../fonts/OpenSans-Semibold.otf") format("opentype"),
+		url("../fonts/OpenSans-Semibold.woff") format("woff");
+   }
+
+
+
+
 /*
 @font-face {
     font-family: ;

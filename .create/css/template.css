@@ -25,6 +25,7 @@ html *{
 }
 .overfow-hidden{ overflow: hidden;}
 div{ margin: 0 auto;}
+.ul-form{ padding: 0;}
 .ul-form li{ padding-bottom: 10px;}
 
 /*global========*/
@@ -81,4 +82,8 @@ div{ margin: 0 auto;}
 .ico{
 	background-repeat: no-repeat;
 	background-position: left top;
+}
+
+.block{
+	display: block!important;
 }

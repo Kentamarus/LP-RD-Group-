@@ -3,16 +3,60 @@
     <head>        
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta charset="utf-8">
-        <title>Template</title>        
+        <title>RD Group</title>        
         <meta name="description" content="">        
         <meta name="keywords" content="">        
     
         <link rel="icon" href="images/favicon.png">            
         <link rel="stylesheet" type="text/css" href="style/bundle.css">      
     </head>
-<body>
-    
+<body>    
     <div class="container-fluid main">                                       
+                     
+	 	 
+        <div class="modal fade" id="callForm" tabindex="-1" role="dialog" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content call-answer">                   
+                    <a href="javascript:void(0)" class="btn-close" data-target="#callForm" ></a>                                                                 
+                     <div class="thanks">                    
+                        <div class="title uppercase cRed">
+                            Спасибо!
+                        </div>
+                        <p>Ваша заявка отправлена</p>
+                        <p>Мы скоро с вами свяжемся</p>
+                    </div>
+                </div>                                                  
+              </div>   
+          </div>  
+       
+        <div id="mm-1" class="mm-page">
+            <div class="hidden">
+                <div class="popup-form call-answer order zoom-anim-dialog " id="callAnswer" >
+                    <div class="block-base-windows overfow-hidden">
+                        <div class="block-before overfow-hidden">                                                                                                   
+                                <div class="title">
+                                    <p>
+                                        <span class="uppercase fontBold btn-block">Заполните форму</span>                                        
+                                        <i>чтобы заказать обратный звонок</i>
+                                    </p>
+                                </div>                               
+                                <form class="call-back-form">
+                                    <input type="hidden" class="subject" name="subject">
+                                    <ul class="ul-form">
+                                        <li>
+                                            <input type="text" class="people text-entry ico ico-arrow" required="" name="firstName" placeholder="Ниша бизнеса">
+                                        </li>
+                                        <li>          							
+                                            <input type="tel" class="phone text-entry ico ico-arrow" required="" name="phone" placeholder="Телефон">
+                                        </li>
+                                    </ul>
+                                    <button type="submit" class="btn btn-primary">Отправить заявку</button>    
+                                </form>                        
+                        </div>                                                
+                    </div>
+                </div>
+            </div>
+        </div>
                      
        <header class="row div-head">                                                       
            <div class="container clearfix">
@@ -24,7 +68,7 @@
                </div>
                <div class="col-sm-4 item-col">
                		<div class="will-call">
-                       <p class="ico ico-phone phone relative">(812) 951-0 2589<span class="show-number cRed underline">открыть номер</span></p>
+                       <p class="ico ico-phone phone relative">(812) 951-0 2589 <span class="show-number cRed underline">открыть номер</span></p>
                        <p class="ico ico-clock">Время работы с 10:00 до 22:00 без выходних и обеда</p>
                    </div>
                </div>
@@ -33,10 +77,123 @@
         
         <section class="row main-top section">
             <div class="container">
-                <h2></h2>
+                <div class="clearfix">
+                	<div class="col-xs-12">
+						<p class="description div-table">
+							<span class="div-table-cell">
+								Отремонтируй диски за <b>2 часа</b> на качественном немецком оборудовании <br>
+								Сэкономь на покупке дисков от <b>36 700</b> рублей
+							</span>
+						</p>
+					</div>
+                </div>
+                <div class="main-top-struct">
+                	<div class="clearfix">
+					   <div class="col-sm-8 item-col">
+					   		<div class="main-view">
+					   			<div class="base">
+									<p class="size35 uppercase">Производим демонтаж/монтаж резины</p>
+									<span class="title-back uppercase">Ремонт дисков и шин</span>
+									<p class="uppercase">Делаем балансировку и оптимизацию колес</p>
+					   			</div>
+					   			<p class="sign">И все это на оборудовании Hofmann</p>
+					   		</div>						   
+					   </div>
+						<div class="col-sm-4 item-col">
+							<div class="call-answer stay-blanket">
+								<div class="title">								
+									<span class="uppercase cRed top-level">Оставьте заявку</span>
+									<p>и получите расчёт стоимости ремонта дисков через 7 минут</p>
+									<p class="cRed">+ узнайте как забрать подарок</p>
+								</div>                               
+								<form class="call-back-form container-fluid ng-pristine ng-valid" novalidate="novalidate">
+									<ul class="ul-form">
+										<li>
+											<input type="text" class="ico ico-people text-empty" required="" name="people" placeholder="Введите имя" aria-required="true">
+										</li>
+										<li>
+											<input type="tel" class="ico ico-phone text-empty" required="" name="phone" placeholder="Введите телефон" aria-required="true">
+										</li>                                            
+									</ul>
+									<input type="submit" value="Оставить заявку" class="btn btn-primary full">								
+									<p class="sign">Сегодня рассчитали уже <b class="cRed">48</b> вариантов</p>
+								</form>
+							</div>
+					   </div>
+                	</div>					
+			   </div>
             </div>
         </section>
         
+         <section class="row one-step section">
+            <div class="container">
+                <div class="title title-dark uppercase">
+                	Восстановление геометрии диска <i class="fontLight">(прокатка)</i>
+                	<span class="step cRed uppercase fontLight">1 этап <b class="fontBold">ремонта дисков</b></span>
+                </div>
+                <div class="title-small div-table">
+                	<div class="div-table-cell">
+                		<span class="uppercase block">Устранение осевого смещения</span>
+является одним из самых трудоемких процессов при <b class="fontBold">ремонте диска</b>
+                	</div>
+                </div>
+                
+                <div class="step-constructor clearfix">
+                	<div class="clearfix">
+						<div class="item item1 pull-left cWhite">
+							<div class="div-title">
+								<div class="content">
+									<label class="div-table"><b class="div-table-cell">Визуальний осмотр</b></label>
+									<p>определение нарушения геометрии диска и выя вление осевого смещения</p>
+								</div>
+							</div>
+							<img src="uploads/slide1.jpg" alt="" class="image">
+						</div>
+						<div class="item item2 pull-left cRed">
+							<img src="uploads/slide2.jpg" alt="" class="image">
+							<div class="div-title">
+								<div class="content">
+									<label class="div-table"><b class="div-table-cell">Оценка усталости металла</b></label>
+									<p>мастер оценивает изношенность и свойства материала</p>
+								</div>
+							</div>                		
+						</div>                
+						<div class="item item3 pull-left cRed">
+							<div class="div-title">
+								<div class="content">
+									<label class="div-table"><b class="div-table-cell">Опредиление дальнейшей работоспособности диска</b></label>
+									<p>минимальная потеря свойств после восстановления геометрии</p>
+								</div>
+							</div>
+							<img src="uploads/slide3.jpg" alt="" class="image">
+						</div>
+						<div class="item item5 pull-left cWhite">
+							<img src="uploads/slide5.jpg" alt="" class="image">
+							<div class="div-title">
+								<div class="content">
+									<label class="div-table"><b class="div-table-cell">Демонстрация клиенту качества выполненной работы</b></label>
+									<p>производим на стенде компании Хофманн</p>
+								</div>
+							</div>							
+						</div>
+					</div>
+<!--
+                	<div class="item item4 cRed">
+                		<div class="div-title">
+                			<div class="content">
+                				<label class="div-table"><b class="div-table-cell">Опредиление дальнейшей работоспособности диска</b></label>
+                				<p>минимальная потеря свойств после восстановления геометрии</p>
+                			</div>
+                		</div>
+                		<img src="uploads/slide3.jpg" alt="" class="image">
+                	</div>                	
+-->
+                </div>
+                </div>                
+            </div>
+        </section>
+        
+        <br>
 <!--
         <section class="row">
             <div class="container">
