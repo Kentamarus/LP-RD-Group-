@@ -16,8 +16,29 @@ var Site = new function () {
             }, 0)
         }
     }
+	this.slickSlider = function(){
+		var show_count = 4;
+		var objW = $("body").width();
+		
+        if (objW > 1024) { show_count = 1; } 
+//        else if (objW > 768)  { show_count = 1;}
+//        else if (objW > 639)  { show_count = 2;}
+        else show_count = 1;
+		
+		$('.multiple-items').slick({
+            infinite: true,
+            dots: false,
+            slidesToShow: show_count,
+            slidesToScroll: 1,
+        });	 
+	},
     this.init = function(){
 		this.parseUrl();
+		this.slickSlider();
+		
+		$(".block-map").click(function() {
+            $(this).find("#map").css("pointer-events", "auto")
+        }),
         
 		$(".show-number").bind("click", function(){
 			$(this).animate({ "width": 0}, 500);
@@ -65,20 +86,26 @@ var Site = new function () {
                             var newForm = thisForm.find(value[i].old).attr("id", value[i].id).attr("name", value[i].id);
                             thisForm.find(value[i].old).html(newForm);
                         }
-                    }    
-                    
-                    thisForm.find("input[type='tel']").val("+375 " + thisForm.find("input[type='tel']").val());                    
-                    var str = thisForm.serialize();
-                    thisForm.find("input").val("");                                      
-					    					
+                    }   
+					
+					$(this).find("input").val("");                                                                   
+					if (thisForm.find("[type='submit']").data("successful") != undefined) {
+						thisForm.parent().animate({height: 0}, 500, function() {$(".thanks").show();});
+					} else  $('#callForm').modal({show: 'true'}).find(".call-answer").addClass("small-window");
+
+					setTimeout(function() {
+						$('.modal').modal('hide');
+						$.magnificPopup.close();
+					}, 3000);                    
+					$(".call-back-form").trigger("reset");
+                    					    					
                     $.ajax({
                         type: "POST",
                         url: "back-end/main.php",
-                        data: str
+                        data: thisForm.serialize()
                     }).done(function() {
                         
-                        $(this).find("input").val("");                                           
-                        
+                        $(this).find("input").val("");                                                                   
                         if (thisForm.find("[type='submit']").data("successful") != undefined) {
                             thisForm.parent().animate({height: 0}, 500, function() {$(".thanks").show();});
                         } else  $('#callForm').modal({show: 'true'}).find(".call-answer").addClass("small-window");
