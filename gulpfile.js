@@ -27,6 +27,7 @@ var file ={
             './.create/css/bootstrap.min.css',
             './.create/css/fonts.css',
             './.create/css/template.css',
+            './.create/css/slick.css',
             './.create/css/pop-up.css',
             './.create/css/style.css',
             './.create/css/media.css']    
@@ -104,7 +105,7 @@ gulp.task('html:build', function () {
 
 gulp.task('js:build', function () {
     gulp.src(path.create.js) //Найдем наш main файл        
-        .pipe(uglify().on('error', gutil.log))        
+        //.pipe(uglify().on('error', gutil.log))        
         .pipe(gulp.dest(path.production.js)) //Выплюнем готовый файл в production 
         .pipe(reload({stream: true}));     
 });
@@ -128,17 +129,13 @@ gulp.task('js:set', function () {
 });
 
 gulp.task('css-concat', function () {         
-    return gulp.src([file.css[0], file.css[1], file.css[2], file.css[3], file.css[4], file.css[5], file.css[6] ])
+    return gulp.src([file.css[0], file.css[1], file.css[2], file.css[3], file.css[4], file.css[5], file.css[6], file.css[7] ])
         .pipe(concat(concatConfig.file))        
         .pipe(gulp.dest('.create/tmp'))
 });
                      
 gulp.task('css-build', function () {
   return gulp.src(path.create.tmp)    
-//        .pipe(cleanCSS({debug: true}, function(details) {
-//            console.log(details.name + ': ' + details.stats.originalSize);
-//            console.log(details.name + ': ' + details.stats.minifiedSize);
-//        }))
         .pipe(gulp.dest(path.create.dirStyle))
         .pipe(gulp.dest(path.production.style))
         .pipe(reload({stream: true}));  
@@ -163,6 +160,7 @@ gulp.task('uploads:build', function () {
 gulp.task('libs:build', function () {
     gulp.src(path.create.libs) //Выберем наши библиотеки        
         .pipe(gulp.dest(path.production.libs)) //И бросим в production 
+		.pipe(reload({stream: true}));  
 });
 
 gulp.task('fonts:build', function () {
@@ -187,15 +185,6 @@ gulp.task('css:build',function(callback){
     gulpSequence('css-concat','css-build', callback);
 })
 
-gulp.task('font-min',function(callback){
-	 return gulp.src(path.source.fonts+'*.ttf')
-         .pipe(fontmin({
-            text: '天地玄黄 宇宙洪荒',
-        }))
-        .pipe(gulp.dest(path.create.fonts))
-	 	.pipe(reload({stream: true}));
-})
-
 gulp.task('webserver', function () {
     browserSync(config.server);
     //browserSync(config.client);
@@ -207,6 +196,9 @@ gulp.task('watch', function(){
     });   
     watch([path.watch.js], function(event, cb) {
         gulp.start('js:build');
+    });
+    watch([path.watch.libs], function(event, cb) {
+        gulp.start('libs:build');
     });
     watch([path.watch.image], function(event, cb) {
         gulp.start('image:build');

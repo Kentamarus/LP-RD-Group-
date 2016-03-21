@@ -12,6 +12,8 @@ a.underline{ text-decoration: underline;}
 a.underline:hover{ text-decoration: none;}
 .pad-bot30{ padding-bottom: 30px!important;}
 .margin-right15{ margin-right: -15px;}
+
+.rel,
 .relative{ position: relative;}
 ul li{ list-style: none;}
 .absolute{ position: absolute;}
@@ -86,4 +88,9 @@ div{ margin: 0 auto;}
 
 .block{
 	display: block!important;
+}
+
+
+.box-shadow{    
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.4);
 }

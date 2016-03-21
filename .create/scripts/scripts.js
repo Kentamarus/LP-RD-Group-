@@ -16,8 +16,29 @@ var Site = new function () {
             }, 0)
         }
     }
+	this.slickSlider = function(){
+		var show_count = 4;
+		var objW = $("body").width();
+		
+        if (objW > 1024) { show_count = 1; } 
+//        else if (objW > 768)  { show_count = 1;}
+//        else if (objW > 639)  { show_count = 2;}
+        else show_count = 1;
+		
+		$('.multiple-items').slick({
+            infinite: true,
+            dots: false,
+            slidesToShow: show_count,
+            slidesToScroll: 1,
+        });	 
+	},
     this.init = function(){
 		this.parseUrl();
+		this.slickSlider();
+		
+		$(".block-map").click(function() {
+            $(this).find("#map").css("pointer-events", "auto")
+        }),
         
 		$(".show-number").bind("click", function(){
 			$(this).animate({ "width": 0}, 500);
