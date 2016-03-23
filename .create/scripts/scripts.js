@@ -20,8 +20,8 @@ var Site = new function () {
 		var show_count = 4;
 		var objW = $("body").width();
 		
-        if (objW > 1024) { show_count = 1; } 
-//        else if (objW > 768)  { show_count = 1;}
+        if (objW > 1024) { show_count = 2; } 
+        else if (objW < 768)  { show_count = 1;}
 //        else if (objW > 639)  { show_count = 2;}
         else show_count = 1;
 		
@@ -32,9 +32,22 @@ var Site = new function () {
             slidesToScroll: 1,
         });	 
 	},
+	this.draggable = function(){
+		$( ".mouse" ).draggable();
+		var wheel_step = $(".block-wheel .item-col");
+		var a = "active";
+		wheel_step.bind("click", function(){
+			var t = $(this);
+			t.parent().find(".item-col").removeClass(a).filter(t).addClass(a);
+			var index = "item"+(t.index()+1);			
+			t.closest(".block-wheel").find(".example").removeClass("item0").removeClass("item1").removeClass("item2").removeClass("item3").removeClass("item4").removeClass("item5").addClass(index);	
+			t.closest(".block-wheel").find(".mouse").removeClass("item0").removeClass("item1").removeClass("item2").removeClass("item3").removeClass("item4").removeClass("item5").addClass(index);	
+		});
+	}
     this.init = function(){
 		this.parseUrl();
 		this.slickSlider();
+		this.draggable();				
 		
 		$(".block-map").click(function() {
             $(this).find("#map").css("pointer-events", "auto")
@@ -213,7 +226,7 @@ var Browser = new function() {
     };
     this.viewPort = function() {
         var def = document.querySelector("meta[name=viewport]");
-        var view = '<meta name="viewport" content="width=980">';
+        var view = '<meta name="viewport" content="width=device-width">';
         if (def != null) {            
             if (this.isIpad()) { 
                 def.remove();

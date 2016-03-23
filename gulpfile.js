@@ -63,7 +63,7 @@ var path = {
     },
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
         html: './.create/**/*.html',
-        js: './.create/js/**/*.js',
+        js: './.create/scripts/**/*.js',
         css: './.create/css/**/*.css',
         style: './.create/style/**/*.css',
         image: './.create/images/**/*.*',
