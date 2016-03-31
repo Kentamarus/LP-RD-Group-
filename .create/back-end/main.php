@@ -8,7 +8,7 @@ try {
         //$email = new message("bear-wolf@ukr.net","Новая заявка с сайта 'TopSnab'", trim($_POST["fullName"]), trim($_POST["phone"]),trim($_POST['view']));                
         
         $email->to = "bear-wolf@ukr.net";
-        $email->from = "Новая заявка с сайта 'TopSnab'";
+        $email->from = "Новая заявка с сайта 'RD - Group'";
         $email->name = trim($_POST["fullName"]);
         $email->phone = trim($_POST["phone"]);
         $email->description = trim($_POST['view']);
