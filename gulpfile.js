@@ -28,6 +28,7 @@ var file ={
             './.create/css/fonts.css',
             './.create/css/template.css',
             './.create/css/slick.css',
+            './.create/css/twentytwenty.css',
             './.create/css/pop-up.css',
             './.create/css/style.css',
             './.create/css/media.css']    
@@ -129,7 +130,7 @@ gulp.task('js:set', function () {
 });
 
 gulp.task('css-concat', function () {         
-    return gulp.src([file.css[0], file.css[1], file.css[2], file.css[3], file.css[4], file.css[5], file.css[6], file.css[7] ])
+    return gulp.src([file.css[0], file.css[1], file.css[2], file.css[3], file.css[4], file.css[5], file.css[6], file.css[7],  file.css[8] ] )
         .pipe(concat(concatConfig.file))        
         .pipe(gulp.dest('.create/tmp'))
 });

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>        
+        <meta name="viewport" content="width=device-width">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta charset="utf-8">
         <title>RD Group</title>        
@@ -28,36 +29,7 @@
                 </div>                                                  
               </div>   
           </div>  
-       
-        <div id="mm-1" class="mm-page">
-            <div class="hidden">
-                <div class="popup-form call-answer order zoom-anim-dialog " id="callAnswer" >
-                    <div class="block-base-windows overfow-hidden">
-                        <div class="block-before overfow-hidden">                                                                                                   
-                                <div class="title">
-                                    <p>
-                                        <span class="uppercase fontBold btn-block">Заполните форму</span>                                        
-                                        <i>чтобы заказать обратный звонок</i>
-                                    </p>
-                                </div>                               
-                                <form class="call-back-form">
-                                    <input type="hidden" class="subject" name="subject">
-                                    <ul class="ul-form">
-                                        <li>
-                                            <input type="text" class="people text-entry ico ico-arrow" required="" name="firstName" placeholder="Ниша бизнеса">
-                                        </li>
-                                        <li>          							
-                                            <input type="tel" class="phone text-entry ico ico-arrow" required="" name="phone" placeholder="Телефон">
-                                        </li>
-                                    </ul>
-                                    <button type="submit" class="btn btn-primary">Отправить заявку</button>    
-                                </form>                        
-                        </div>                                                
-                    </div>
-                </div>
-            </div>
-        </div>
-                     
+                            
        <header class="row div-head">                                                       
            <div class="container clearfix">
                <div class="col-md-4 item-col">
@@ -109,7 +81,7 @@
 								<form class="call-back-form">
 									<ul class="ul-form">
 										<li>
-											<input type="text" class="ico ico-people text-empty" required="" name="people" placeholder="Введите имя" aria-required="true">
+											<input type="text" class="ico ico-people text-empty" required="" name="fullName" placeholder="Введите имя" aria-required="true">
 										</li>
 										<li>
 											<input type="tel" class="ico ico-phone text-empty" required="" name="phone" placeholder="Введите телефон" aria-required="true">
@@ -209,8 +181,14 @@
             <div class="block-wheel section">
             	<div class="container">
             		<div class="relative original">
+<!--
             			<div class="mouse"></div>
             			<div class="example rel item"></div>
+-->
+						<div class="twentytwenty-container" data-orientation="vertical">
+						  <img src="uploads/wheel-original-new.png" alt="" />
+						  <img src="uploads/wheel-original-old.png" alt="" />
+						</div>
             		</div>            		
             		<div class="base">
 						<div class="item-col">
@@ -463,7 +441,7 @@
 						<form class="call-back-form">
 							<ul class="ul-form">
 								<li>
-									<input type="text" class="ico ico-people text-empty" required="" name="people" placeholder="Введите имя" aria-required="true">
+									<input type="text" class="ico ico-people text-empty" required="" name="fullName" placeholder="Введите имя" aria-required="true">
 								</li>
 								<li>
 									<input type="tel" class="ico ico-phone text-empty" required="" name="phone" placeholder="Введите телефон" aria-required="true">
@@ -736,6 +714,8 @@ var map;
         <script src="libraries/jquery.magnific-popup.min.js"></script>
         <script src="libraries/bootstrap.min.js"></script>
         <script src="libraries/jquery-ui.min.js"></script>
+        <script src="libraries/jquery.event.move.js"></script>
+        <script src="libraries/jquery.twentytwenty.js"></script>
         <script src="libraries/slick.min.js"></script>                    
         <script src="libraries/jquery.validate.min.js"></script>        
         

@@ -1,7 +1,7 @@
 
 $(function(){    
     Browser.init();
-    Site.init();     
+    Site.init();     	
 });
 
 var Site = new function () {
@@ -18,7 +18,7 @@ var Site = new function () {
     }
 	this.slickSlider = function(){
 		var show_count = 4;
-		var objW = $("body").width();
+		var objW = $("body").width();		
 		
         if (objW > 1024) { show_count = 2; } 
         else if (objW < 768)  { show_count = 1;}
@@ -32,23 +32,41 @@ var Site = new function () {
             slidesToScroll: 1,
         });	 
 	},
-	this.draggable = function(){
-		$( ".mouse" ).draggable();
-		var wheel_step = $(".block-wheel .item-col");
-		var a = "active";
-		wheel_step.bind("click", function(){
+	this.twentytwenty = function(){		
+      	$(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'});
+		
+		var handle = $(".twentytwenty-handle");
+		var before = $(".twentytwenty-before");
+		handle.attr("style"," top:"+265+"px");
+		before.css("clip","rect(0px 550px "+265+"px 0px)")	
+		
+		$(".block-wheel .item-col").bind("click", function(){
 			var t = $(this);
+			var a = "active";
 			t.parent().find(".item-col").removeClass(a).filter(t).addClass(a);
-			var index = "item"+(t.index()+1);			
-			t.closest(".block-wheel").find(".example").removeClass("item0").removeClass("item1").removeClass("item2").removeClass("item3").removeClass("item4").removeClass("item5").addClass(index);	
-			t.closest(".block-wheel").find(".mouse").removeClass("item0").removeClass("item1").removeClass("item2").removeClass("item3").removeClass("item4").removeClass("item5").addClass(index);	
+			var index = "item"+(t.index()+1);		
+			var top = 0;
+			var bef = 0;
+			t.closest(".block-wheel").find(".twentytwenty-overlay").removeClass("item1").removeClass("item2").removeClass("item3").removeClass("item4").removeClass("item5").addClass(index);			
+			switch(t.index()+1)
+			{
+				case 1: { top = "46px"; bef = top; break;}
+				case 2: { top = "159px"; bef = top; break;}
+				case 3: { top = "265px"; bef = top; break;}
+				case 4: { top = "388px"; bef = "265px"; break;}
+				case 5: { top = "503px"; bef = top; break;}
+				default: break;		
+			}		
+			handle.attr("style"," top:"+top);
+			before.css("clip","rect(0px 550px "+bef+" 0px)")	
 		});
-	}
+		
+	},	
     this.init = function(){
 		this.parseUrl();
-		this.slickSlider();
-		this.draggable();				
-		
+		this.slickSlider();		
+		this.twentytwenty();
+						
 		$(".block-map").click(function() {
             $(this).find("#map").css("pointer-events", "auto")
         }),
@@ -100,18 +118,7 @@ var Site = new function () {
                             thisForm.find(value[i].old).html(newForm);
                         }
                     }   
-					
-					$(this).find("input").val("");                                                                   
-					if (thisForm.find("[type='submit']").data("successful") != undefined) {
-						thisForm.parent().animate({height: 0}, 500, function() {$(".thanks").show();});
-					} else  $('#callForm').modal({show: 'true'}).find(".call-answer").addClass("small-window");
-
-					setTimeout(function() {
-						$('.modal').modal('hide');
-						$.magnificPopup.close();
-					}, 3000);                    
-					$(".call-back-form").trigger("reset");
-                    					    					
+					                    					    					
                     $.ajax({
                         type: "POST",
                         url: "back-end/main.php",
@@ -204,8 +211,9 @@ var Browser = new function() {
             data.$b.addClass("safari");
         } 
         else if ((data.navigator.indexOf('Trident') > 0) && (data.navigator.indexOf('rv:11.') > 0)) data.$b.addClass("ie11");                             
-                
-        this.viewPort();
+        
+		if (navigator.userAgent.indexOf("Mac OS X") != -1) 	data.$b.addClass("mac");                             
+        //this.viewPort();
     };
     this.isIpad = function() { return this.check(this.data.list[0]); };
     this.isAndroid = function() { return this.check(this.data.list[1]); };
@@ -226,7 +234,7 @@ var Browser = new function() {
     };
     this.viewPort = function() {
         var def = document.querySelector("meta[name=viewport]");
-        var view = '<meta name="viewport" content="width=device-width">';
+        var view = '<meta name="viewport" content="width=399px">';
         if (def != null) {            
             if (this.isIpad()) { 
                 def.remove();
